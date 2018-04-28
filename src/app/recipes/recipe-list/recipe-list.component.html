@@ -6,17 +6,6 @@
 <hr>
 <div class="row">
   <div class="col-12">
-    <div *ngFor="let recipe of recipes" class="card">
-      <div class="row">
-        <div class="card-body col-6">
-          <h5 class="card-title">{{recipe.name}}</h5>
-          <p class="card-text">{{recipe.description}}</p>
-        </div>
-        <div class="col-6">
-          <img class="card-img-bottom" [src]="recipe.imagePath" alt={{recipe.name}}>
-        </div>
-      </div>
-    </div>
-    <app-recipe-item></app-recipe-item>
+    <app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl"></app-recipe-item>
   </div>
 </div>
