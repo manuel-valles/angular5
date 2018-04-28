@@ -3,9 +3,6 @@
     {{ server.name }}
   </div>
   <div class="card-body">
-    <p>
-      <b *ngIf="server.type === 'server'" style="color: red" class="card-text">{{ server.content }}</b>
-      <i *ngIf="server.type === 'blueprint'" class="card-text">{{ server.content }}</i>
-    </p>
+    <ng-content></ng-content>
   </div>
 </div>
