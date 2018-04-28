@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   servers = [{type: 'server', name: 'TestServer', content: 'Just a test'}];
+
+  onServerAdded(serverData: {serverName: string, serverContent: string}){
+    this.servers.push({
+      type: 'server',
+      name: serverData.serverName, 
+      content: serverData.serverContent
+    });
+  }
+  onBlueprintAdded(blueprintData: {serverName: string, serverContent: string}){
+    this.servers.push({
+      type: 'blueprint',
+      name: blueprintData.serverName, 
+      content: blueprintData.serverContent
+    });
+  }
 }
