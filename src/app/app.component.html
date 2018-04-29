@@ -11,10 +11,11 @@
         class="list-group"
         *ngFor="let number of numbers">
         <div *ngIf="onlyOdd; else allNum">
-          <li class="list-group-item mb-2" *ngIf="number%2 !== 0">{{number}}</li>
+          <li class="list-group-item mb-2 odd" *ngIf="number%2 !== 0">{{number}}</li>
         </div>
         <ng-template #allNum>
-          <li class="list-group-item mb-2">{{number}}</li>
+          <li class="list-group-item mb-2" [ngClass]="{odd: number%2 !== 0}"
+          [ngStyle]="{fontStyle: number%2===0 ? 'italic':'normal'}">{{number}}</li>
         </ng-template>
       </ul>
     </div>
