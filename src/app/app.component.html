@@ -13,10 +13,14 @@
         <div *ngIf="onlyOdd; else allNum">
           <li class="list-group-item mb-2 odd" *ngIf="number%2 !== 0">{{number}}</li>
         </div>
-        <ng-template #allNum>
+        <!-- <ng-template #allNum>
           <li class="list-group-item mb-2" [ngClass]="{odd: number%2 !== 0}"
           [ngStyle]="{fontStyle: number%2===0 ? 'italic':'normal'}">{{number}}</li>
-        </ng-template>
+        </ng-template> -->
+        <div *appUnless="onlyOdd">
+          <li class="list-group-item mb-2" [ngClass]="{odd: number%2 !== 0}"
+          [ngStyle]="{fontStyle: number%2===0 ? 'italic':'normal'}">{{number}}</li>
+        </div>
       </ul>
       <p appBasicHighlight>Style me with basic directive!</p>
       <p [appBetterHighlight]="'red'" [defaultColor]="'yellow'">Style me with Better Directive!</p>
