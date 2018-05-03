@@ -1,3 +1,7 @@
-<p>
-  contact works!
-</p>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input ngModel name="title" type="text" id="title" class="form-control" placeholder="Enter title">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
