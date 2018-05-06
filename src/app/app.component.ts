@@ -20,7 +20,14 @@ export class AppComponent implements OnInit{
       }),
       'gender': new FormControl('male'),
       'hobbies': new FormArray([])
-    })
+    });
+    // Reacting to Status and Value Changes
+    this.signupForm.statusChanges.subscribe(
+      status => console.log(status)
+    );
+    this.signupForm.valueChanges.subscribe(
+      value => console.log(value)
+    );
   }
 
   onSubmit(){
