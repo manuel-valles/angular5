@@ -9,7 +9,8 @@
             class="form-control" 
             id="name" 
             ngModel 
-            name="name">
+            name="name"
+            required>
         </div>
         <div class="col-2 form-group">
           <label for="amount">Amount</label>
@@ -18,12 +19,17 @@
             class="form-control" 
             id="amount" 
             ngModel 
-            name="amount">
+            name="amount"
+            required
+            pattern="^[1-9]\d*$">
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <button type="submit" class="btn btn-success">Add</button>
+          <button 
+            type="submit" 
+            class="btn btn-success" 
+            [disabled]="!f.valid">Add</button>
           <button type="button" class="btn btn-danger" >Delete</button>
           <button type="button" class="btn btn-primary">Clear</button>
         </div>
