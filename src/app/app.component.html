@@ -6,7 +6,7 @@
           class="list-group-item"
           *ngFor="let server of servers"
           [ngClass]="getStatusClasses(server)">
-          <strong>{{ server.name | shorten}}</strong> | 
+          <strong>{{ server.name | shorten: 12}}</strong> | 
             {{ server.instanceType | uppercase }} | 
             {{ server.started | date: "fullDate" | uppercase }}
           <span
