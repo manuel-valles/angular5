@@ -1,5 +1,7 @@
 import { Injectable } from "@angular/core";
-import { Http, Headers } from "@angular/http";
+import { Http, Headers, Response } from "@angular/http";
+// Unlock Operators
+import 'rxjs/Rx';
 
 @Injectable()
 
@@ -17,6 +19,12 @@ export class ServerService {
   }
 
   getServers() {
-    return this.http.get('https://angular-http-f8f26.firebaseio.com/data.json');
+    return this.http.get('https://angular-http-f8f26.firebaseio.com/data.json')
+      .map(
+        (response: Response) => {
+          const data = response.json();
+          return data;
+        }
+      );
   }
 }
