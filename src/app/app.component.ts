@@ -11,7 +11,7 @@ export class AppComponent {
       instanceType: 'medium',
       name: 'Production Server',
       status: 'stable',
-      started: new Date(15, 1, 2017)
+      started: new Date(2017, 10, 5)
     },
     {
       instanceType: 'large',
