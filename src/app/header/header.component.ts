@@ -17,4 +17,7 @@ export class HeaderComponent {
         (response: Response) => console.log(response)
       );
   }
+  onFetchData(){
+    this.dsService.getRecipes();
+  }
 }
