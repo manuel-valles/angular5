@@ -1,3 +1,17 @@
-<p>
-  signin works!
-</p>
+<div class="row justify-content-center">
+  <div class="col-12 col-sm-10 col-md-8">
+    <form (ngSubmit)="onSignin(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" name="email" ngModel required email #email="ngModel">
+        <span *ngIf="email.invalid && email.touched" class="text-muted">Please enter a valid email</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" name="password" ngModel required minlength="6" #password="ngModel">
+        <span *ngIf="password.invalid && password.touched" class="text-muted">Password must be at least 6 characters long.</span>
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign In</button>
+    </form>
+  </div>
+</div>
