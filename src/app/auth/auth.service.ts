@@ -25,6 +25,11 @@ export class AuthService{
       )
   }
 
+  logout(){
+    firebase.auth().signOut();
+    this.token = null;
+  }
+
   getToken(){
     // getIdToken is an asynchronous action - Check the DB not the LS
     firebase.auth().currentUser.getIdToken()
