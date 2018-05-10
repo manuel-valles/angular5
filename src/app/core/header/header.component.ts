@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Response } from '@angular/http';
 
 import { DataStorageService } from '../../shared/data-storage.service';
 import { AuthService } from '../../auth/auth.service';
@@ -16,7 +15,7 @@ export class HeaderComponent {
   onSaveData(){
     this.dsService.storeRecipes()
       .subscribe(
-        (response: Response) => console.log(response)
+        response => console.log(response)
       );
   }
   onFetchData(){
