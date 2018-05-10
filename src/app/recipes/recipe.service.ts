@@ -13,7 +13,7 @@ export class RecipeService {
     new Recipe(
       'A Test Recipe1', 
       'This is simply a test1',
-      'https://www.maxpixel.net/static/photo/1x/Burgers-Burger-Chickpeas-Recipes-Food-Vegetables-2920072.jpg',
+      'https://manuel-valles.com/project/recipesBook/img/filipinoStew.jpg',
       [
         new Ingredient('Meat', 1),
         new Ingredient('Fries', 20)
@@ -22,7 +22,7 @@ export class RecipeService {
     new Recipe(
       'A Test Recipe2', 
       'This is simply a test2',
-      'https://www.maxpixel.net/static/photo/1x/Burgers-Burger-Chickpeas-Recipes-Food-Vegetables-2920072.jpg',
+      'https://manuel-valles.com/project/recipesBook/img/filipinoStew.jpg',
       [
         new Ingredient('Bread', 2),
         new Ingredient('Cheese', 1)
