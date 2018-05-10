@@ -12,7 +12,7 @@ import { AuthService } from '../../auth/auth.service';
 
 export class HeaderComponent {
   constructor(private dsService: DataStorageService,
-    private authService: AuthService){}
+    public authService: AuthService){}
   onSaveData(){
     this.dsService.storeRecipes()
       .subscribe(
